@@ -1,99 +1,175 @@
-<!DOCTYPE HTML>
-<html>
-        <head>
-            <title>Outreach Activities</title>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="stylesheet" href="assets/css/main.css" />
-            <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        </head>
-        <body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Science outreach and TEDx talks by astrophysicist Valentina La Torre.">
+    <title>Outreach &amp; TEDx | Valentina La Torre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #17243d;
+            --paper: #f7f8fa;
+            --white: #fff;
+            --ink: #20283a;
+            --muted: #566276;
+            --line: #dce1e9;
+            --accent: #c58a39;
+            --link: #344f85;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+        body { margin: 0; color: var(--ink); background: var(--paper); font: 18px/1.65 'Source Sans 3', system-ui, sans-serif; }
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', system-ui, sans-serif; line-height: 1.18; }
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin: 0 0 .4rem; }
+        h2 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin: 0 0 1.2rem; }
+        h3 { font-size: 1.15rem; margin: 0 0 .3rem; }
+        p { max-width: 72ch; margin: .2rem 0 1rem; }
+        a { color: var(--link); }
+        a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+        .wrap { max-width: 1050px; margin: auto; padding: 0 24px; }
 
-    <!-- Wrapper -->
-            <div id="wrapper">
-                <nav id="nav">
-						<ul>
-							<li><a href="index.html">About</a></li>
-							<li><a href="index.html">Research</a></li>
-							<li><a href="index.html">Publications</a></li>
-							<li><a href="index.html">Teaching</a></li>
-							<li><a href="outreach.html">Outreach</a></li>
+        /* Navigation: same as homepage */
+        nav { background: var(--navy); color: white; position: sticky; top: 0; z-index: 10; }
+        nav .wrap { display: flex; gap: 1.3rem; align-items: center; min-height: 66px; flex-wrap: wrap; padding-block: .65rem; }
+        nav a { color: #f7f8fa; text-decoration: none; font-size: .93rem; font-weight: 600; }
+        nav a:hover { color: #f2c57e; }
+        .brand { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; margin-right: auto; white-space: nowrap; }
 
-						</ul>
-					</nav>
+        /* Page header */
+        .hero { background: linear-gradient(90deg, rgba(17,29,52,.93), rgba(17,29,52,.82)), url('images/deepfield.png') center/cover, var(--navy); color: white; padding: 65px 0 70px; }
+        .hero p { color: #e4e8f0; font-size: 1.2rem; }
+        .section { padding: 55px 0; border-bottom: 1px solid var(--line); }
+        .white { background: var(--white); }
+        .small { font-size: .92rem; }
+        .subtle { color: var(--muted); }
+        .video { aspect-ratio: 16/9; width: 100%; border: 0; background: #10141b; }
+        .feature { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 36px; align-items: center; }
 
-        <!-- Header -->
-                <header id="header" class="alt">
-                    <h1>Outreach Activities</h1>
-                </header>
+        /* Outreach activities and original photographs */
+        .activities { list-style: none; padding: 0; margin: 0; }
+        .activities li { margin: 0 0 1.15rem; }
+        .activities p { margin: .1rem 0 0; color: var(--muted); font-size: .96rem; }
+        .photos { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+        .photos figure { margin: 0; }
+        .photos img { width: 100%; height: auto; display: block; }
+        .photos figcaption { color: var(--muted); font-size: .85rem; margin-top: 8px; }
+        footer { padding: 24px; text-align: center; font-size: .85rem; color: var(--muted); }
 
-        <!-- Main Content -->
-                <div id="main">
+        @media (max-width: 760px) {
+            nav .wrap { gap: .8rem 1.1rem; }
+            .brand { width: 100%; }
+            .hero { padding: 48px 0; }
+            .section { padding: 42px 0; }
+            .feature, .photos { grid-template-columns: 1fr; gap: 24px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main navigation -->
+    <nav aria-label="Main navigation">
+        <div class="wrap">
+            <a class="brand" href="index.html#top">Valentina La Torre</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#research">Research</a>
+            <a href="index.html#publications">Publications</a>
+            <a href="index.html#teaching">Teaching</a>
+            <a href="outreach.html" aria-current="page">Outreach &amp; TEDx</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
 
-	   <!-- Outreach Introduction -->
-                    <section id="intro" class="main">
-                        <p>As a first-generation college student, I understand the challenges and uncertainties that come with navigating the path to higher education. This is why outreach is deeply personal and important to me. I especially visit middle and high schools in communities where many students will probably be the first in their families to attend college, offering them encouragement and direction. Every outreach presentation I give begins with a section on "how to become an astrophysicist, or scientist," outlining the degrees, skills, and steps required, offering them the roadmap I once searched for myself. I remember being in their shoes, full of dreams and curiosity, and it is my goal to inspire them to follow their aspirations. </p>
-                    	<p>Engaging with students is always a rewarding experience. Their curiosity and excitement remind me why I love what I do, and it’s a privilege to be able to spark an interest in science and learning that could shape their futures.</p>
-		    </section>
+    <!-- Page title -->
+    <header class="hero">
+        <div class="wrap">
+            <h1>Outreach &amp; TEDx</h1>
+            <p>Sharing astronomy and the paths into science.</p>
+        </div>
+    </header>
 
-            <!-- Outreach Activities List -->
-                    <section id="outreach" class="main">
-                        <ul>
-                            <li>
-                                <strong>Talk "Galaxies in the Universe" at Scuola Media "Rodari" (Apricena, FG, Italy)</strong><br>
-                                <p>Date: Jan 12 and Dec 20 2023</p>
-                            </li>	
-			    <li>
-                                <strong>Reverse Science and Engineering Fair, Medford High School</strong><br>
-                                <p>Poster presentation in November 2022 and poster judging in April 2023.</p>
-                            </li>
-                            <li>
-                                <strong>Talk "Galaxy Evolution and Artificial Intelligence" at the Pioneer Charter School of Science (Saugus MA)</strong><br>
-                                <p>Date: Nov 17, 2022</p>
-                            </li>
-			    <li>
-                                 <strong>Invited at the <a href="https://open.spotify.com/episode/36U5cKw7OAzc2HoIQeb4mq" target="_blank">Co.Scienza Podcast</a> (in Italian), "Simulare Universi"</strong><br>
-                                 <p>Date: August 2021, interview on CAMELS (Cosmology and Astrophysics with MachinE Learning Simulations)</p>
-                            </li>    
-                        </ul>
-                    </section>
-
-            <!-- Pictures -->
-                    <section id="pictures" class="main">
-                        <div class="row">
-                            <div class="col-6 col-12">
-				    <figure>
-	                                <span class="image fit"><img src="images/Rodari2023.JPG" alt="Scuola Media Rodari - Apricena, FG, Italy" /></span>
-					<figcaption>Scuola Media Rodari - Apricena, FG, Italy</figcaption>
-				    </figure>
-                            </div>
-                            <div class="col-6 col-12">
-				    <figure>
-                                	<span class="image fit"><img src="images/RSF_22_23.jpeg" alt="Reverse Science Fair, Medford High School, MA" /></span>
-					<figcaption> Reverse Science Fair, Medford High School, MA</figcaption>   
-				    </figure>
-                            </div>
-                        </div>
-                    </section>
+    <main>
+        <!-- TEDx talk -->
+        <section class="section white" id="tedx">
+            <div class="wrap">
+                <h2>TEDxApricena 2026</h2>
+                <div class="feature">
+                    <div>
+                        <h3>Galassie nell’era dei dati</h3>
+                        <p class="small subtle">October 2026 · Talk in Italian</p>
+                        <p>In my TEDx talk, I discuss galaxies, astronomical datasets, and the role of machine learning in studying the Universe.</p>
+                        <p><a href="https://www.youtube.com/watch?v=BZSWasVAcxo">Watch on YouTube</a></p>
+                    </div>
+                    <iframe class="video"
+                            src="https://www.youtube-nocookie.com/embed/BZSWasVAcxo"
+                            title="Galassie nell’era dei dati — TEDxApricena"
+                            loading="lazy"
+                            allow="accelerometer; encrypted-media; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
                 </div>
-
-        <!-- Footer -->
-                <footer id="footer">
-                    <h2>Contact</h2>
-                    <dl class="alt">
-                        <dt>Address</dt>
-                        <dd>Department of Physics and Astronomy, Tufts University</dd>
-                        <dd>Office 312 C</dd>
-                        <dd>574 Boston Ave, Medford, MA 02155</dd>
-                        <dt>Email</dt>
-                        <dd><a href="mailto:valentina.la_torre@tufts.edu">valentina.la_torre@tufts.edu</a></dd>
-                    </dl>
-                    <ul class="icons">
-                        <li><a href="https://www.linkedin.com/in/valentina-la-torre-687877162" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                    <p class="copyright">&copy; VALENTINA LA TORRE ALL RIGHTS RESERVED | LAST UPDATED 10/2024 | Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-                </footer>
             </div>
-        </body>
-</html>
+        </section>
 
+        <!-- Why outreach matters to me -->
+        <section class="section" id="about-outreach">
+            <div class="wrap">
+                <h2>Why outreach matters to me</h2>
+                <p>As a first-generation college student, I understand the challenges and uncertainties that come with navigating the path to higher education. This is why outreach is deeply personal and important to me. I especially visit middle and high schools in communities where many students will probably be the first in their families to attend college, offering them encouragement and direction. Every outreach presentation I give begins with a section on "how to become an astrophysicist, or scientist," outlining the degrees, skills, and steps required, offering them the roadmap I once searched for myself. I remember being in their shoes, full of dreams and curiosity, and it is my goal to inspire them to follow their aspirations.</p>
+                <p>Engaging with students is always a rewarding experience. Their curiosity and excitement remind me why I love what I do, and it’s a privilege to be able to spark an interest in science and learning that could shape their futures.</p>
+            </div>
+        </section>
+
+        <!-- Past outreach activities -->
+        <section class="section white" id="activities">
+            <div class="wrap">
+                <h2>Outreach activities</h2>
+                <ul class="activities">
+                    <li>
+                        <strong>Talk "Galaxies in the Universe" at Scuola Media "Rodari" (Apricena, FG, Italy)</strong>
+                        <p>January 12 and December 20, 2023</p>
+                    </li>
+                    <li>
+                        <strong>Reverse Science and Engineering Fair, Medford High School</strong>
+                        <p>Poster presentation in November 2022 and poster judging in April 2023.</p>
+                    </li>
+                    <li>
+                        <strong>Talk "Galaxy Evolution and Artificial Intelligence" at the Pioneer Charter School of Science (Saugus, MA)</strong>
+                        <p>November 17, 2022</p>
+                    </li>
+                    <li>
+                        <strong>Guest on the <a href="https://open.spotify.com/episode/36U5cKw7OAzc2HoIQeb4mq">Co.Scienza Podcast</a> (in Italian), "Simulare Universi"</strong>
+                        <p>August 2021 · Interview about CAMELS (Cosmology and Astrophysics with MachinE Learning Simulations)</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Photographs from outreach events -->
+        <section class="section" id="photos">
+            <div class="wrap">
+                <h2>Photos</h2>
+                <div class="photos">
+                    <figure>
+                        <img src="images/Rodari2023.JPG" alt="Outreach at Scuola Media Rodari in Apricena, Italy" loading="lazy">
+                        <figcaption>Scuola Media Rodari — Apricena, FG, Italy</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/RSF_22_23.jpeg" alt="Reverse Science Fair at Medford High School, Massachusetts" loading="lazy">
+                        <figcaption>Reverse Science Fair — Medford High School, MA</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="margin:0 auto 6px"><a href="index.html#contact">Contact</a> · <a href="https://www.linkedin.com/in/valentina-la-torre-687877162">LinkedIn</a> · <a href="https://github.com/valentinalatorre">GitHub</a></p>
+        © 2026 Valentina La Torre
+    </footer>
+</body>
+</html>
